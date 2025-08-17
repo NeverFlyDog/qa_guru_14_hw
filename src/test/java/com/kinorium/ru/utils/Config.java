@@ -5,4 +5,5 @@ public class Config {
     public static final String BROWSER_VERSION = System.getProperty("browserVersion", null);
     public static final String BROWSER_SIZE = System.getProperty("browserSize", "1920x1080");
     public static final String REMOTE_URL = System.getProperty("remoteUrl", null);
+    public static final String REMOTE_DOMAIN = System.getProperty("remoteDomain", null);
 }
