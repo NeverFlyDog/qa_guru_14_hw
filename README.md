@@ -1,4 +1,5 @@
 # Проект по автоматизации тестирования сайта [kinorium.com](https://ru.kinorium.com)
+
 ![Kinorium Banner](assets/img/kinorium.png)
 
 ## **Содержание:**
@@ -51,9 +52,8 @@ ____
 ## <img width="4%" style="vertical-align:middle" title="Jenkins" src="assets/img/logo/Jenkins.svg"> Сборка в [Jenkins](https://jenkins.autotests.cloud/job/036-ConstantinBesson-unit14)
 
 Для запуска сборки необходимо перейти в раздел <code>Собрать с параметрами</code> и нажать кнопку <code>Собрать</code>.
-<p align="center">
+
 <img title="Jenkins Build" src="assets/img/screenshots/jenkins.png">
-</p>
 
 ____
 <a id="console"></a>
@@ -86,14 +86,14 @@ clean test
 - `browser` - браузер, в котором выполнятся тесты
 - `browserVersion` - версия браузера
 - `browserSize` - размер окна браузера, в котором будут выполняться тесты
-- `remoteUrl` - адрес удаленного сервера, на котором будут запускаться тесты
+- `remoteUrl` - полный адрес удаленного сервера, на котором будут запускаться тесты
+- `remoteDomain` - адрес удаленного сервера, на котором будут запускаться тесты, для прикрепления видео к отчету
+- 
 ____
 <a id="allure"></a>
 ## <img width="4%" style="vertical-align:middle" title="Allure Report" src="assets/img/logo/Allure.svg"> Пример [Allure-отчета](https://jenkins.autotests.cloud/job/036-ConstantinBesson-unit14/5/allure)
 
-<p align="center">
 <img title="Allure Overview" src="assets/img/screenshots/allure_report.png">
-</p>
 
 В отчете Allure представлены результаты тестирования с общей статистикой.
 ____
@@ -101,15 +101,13 @@ ____
 ## <img width="4%" style="vertical-align:middle" title="Telegram" src="assets/img/logo/Telegram.svg"> Уведомления в Telegram
 
 После завершения сборки бот, созданный в Telegram, автоматически обрабатывает и отправляет сообщение с результатом.
-<p align="center">
+
 <img width="70%" title="Telegram Notifications" src="assets/img/screenshots/tg_bot.png">
-</p>
 
 ____
 <a id="video"></a>
 ## <img width="4%" style="vertical-align:middle" src="assets/img/logo/Selenoid.svg"> Видео примера запуска тестов в Selenoid
 
 К каждому тесту в отчете прилагается видео прогона.
-<p align="center">
-  <img title="Selenoid Video" src="assets/video/video.gif">
-</p>
+
+<img title="Selenoid Video" src="assets/video/video.gif">
