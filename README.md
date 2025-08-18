@@ -80,6 +80,7 @@ clean test
 -DbrowserVersion=${BROWSER_VERSION}
 -DbrowserSize=${BROWSER_SIZE}
 -DremoteUrl=${REMOTE_URL}
+-DremoteDomain=${REMOTE_DOMAIN}
 ```
 ***Параметры сборки в Jenkins***
 
