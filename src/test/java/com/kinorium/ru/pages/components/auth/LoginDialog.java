@@ -6,15 +6,13 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
-public class LoginDialog extends BaseAuthDialog<LoginDialog> {
-    protected LoginDialog() {
-        super($("form.intAuth.dialog"));
-    }
+public class LoginDialog {
+    private final SelenideElement formRoot = $("form.intAuth.dialog");
 
     @Step("Проверяем, что форма логина отображается")
-    @Override
     public LoginDialog shouldBeVisible() {
-        return super.shouldBeVisible();
+        formRoot.shouldBe(visible);
+        return this;
     }
 
     @Step("Проверяем, что поле 'email' отображается")
@@ -32,7 +30,7 @@ public class LoginDialog extends BaseAuthDialog<LoginDialog> {
     @Step("Проверяем, что кнопка входа отображается")
     public LoginDialog shouldHaveSubmitButton() {
         getSubmitButton().shouldBe(visible);
-        return  this;
+        return this;
     }
 
     @Step("Проверяем, что отображается кнопка восстановления пароля")

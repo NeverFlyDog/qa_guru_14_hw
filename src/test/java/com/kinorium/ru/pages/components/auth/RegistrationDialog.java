@@ -6,16 +6,13 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
-public class RegistrationDialog extends BaseAuthDialog<RegistrationDialog> {
+public class RegistrationDialog {
+    private final SelenideElement formRoot = $("form.intReg.dialog");
 
-    protected RegistrationDialog() {
-        super($("form.intReg.dialog"));
-    }
-
-    @Override
     @Step("Проверяем, что форма регистрации отображается")
     public RegistrationDialog shouldBeVisible() {
-        return super.shouldBeVisible();
+        formRoot.shouldBe(visible);
+        return this;
     }
 
     @Step("Проверяем, что поле ввода имени отображается")

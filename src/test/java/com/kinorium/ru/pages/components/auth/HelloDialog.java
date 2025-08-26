@@ -7,21 +7,18 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 
-public class HelloDialog extends BaseAuthDialog<HelloDialog> {
+public class HelloDialog {
+    private final SelenideElement formRoot = $("form.hello.dialog");
     private final SelenideElement vkAuthButton = $("button.vkAuth");
     private final SelenideElement fbAuthButton = $("button.fbAuth");
     private final SelenideElement gAuthButton = $("button.gAuth");
     private final SelenideElement aAuthButton = $("button.aAuth");
     private final SelenideElement tgAuthIFrame = $("iframe#telegram-login-KinoriumRuBot");
 
-    public HelloDialog() {
-        super($("form.hello.dialog"));
-    }
-
     @Step("Проверяем, что форма входа отображается")
-    @Override
     public HelloDialog shouldBeVisible() {
-        return super.shouldBeVisible();
+        formRoot.shouldBe(visible);
+        return this;
     }
 
     @Step("Проверяем, что кнопка регистрации отображается")
